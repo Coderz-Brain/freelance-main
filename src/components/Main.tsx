@@ -27,7 +27,7 @@ const Main = () => {
           </p>
 
 
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-16">
+          <div className="flex flex-row gap-5 mb-16">
             <button className={`px-6 py-2 text-base font-medium text-white hover:text-[#cbfb45] bg-[#000] rounded-full hover:bg-gray-800 transition duration-300 ${darkMode? "bg-[#000] border rouded-full text-gray-400" : "text-gray-600k"} `}>
               Get in touch
             </button>
