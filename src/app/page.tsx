@@ -1,9 +1,16 @@
 
 
+
+import Main from "@/components/Main";
+import Brands from "@/components/Brands";
+
+
+
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-sky-300 text-4xl text-center"> Freelance main website </h1>
+    <div className="flex flex-col gap-y-4">
+      <Main/>
+      <Brands/>
     </div>
   );
 }
