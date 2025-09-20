@@ -4,15 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useTheme } from "../components/context/ThemeContext";
 import Logo from "./common/logo/Logo";
-import {
-  LuSun,
-  LuMoon,
-  LuX,
-  LuMenu,
-} from "react-icons/lu";
+import { LuSun, LuMoon, LuX, LuMenu, LuArrowUpRight  } from "react-icons/lu";
 import GetInTouch from "./common/getInTouch/GetInTouch";
-
-
 
 type NavItem = {
   name: string;
@@ -31,7 +24,7 @@ const Navbar: React.FC = () => {
   const navItems: NavItem[] = [
     {
       name: "About",
-      href: "/aboutus",
+      href: "/about-us",
     },
     {
       name: "Services",
@@ -39,7 +32,7 @@ const Navbar: React.FC = () => {
     },
     {
       name: "Case Studies",
-      href: "/casestudies",
+      href: "/case-studies",
     },
     {
       name: "Blog",
@@ -49,7 +42,7 @@ const Navbar: React.FC = () => {
 
   return (
     <header className="fixed top-5 z-50 w-full px-2">
-      <div className="lg:flex lg:flex-row lg:justify-around">
+      <div className="lg:flex lg:flex-row lg:justify-around max-w-full">
         <div>
           <div
             className={`w-full lg:w-7xl mx-auto flex items-center justify-between text-base px-2 py-1 rounded-full shadow-lg backdrop-blur-lg border border-gray-600 ${
@@ -57,7 +50,7 @@ const Navbar: React.FC = () => {
             } transition-colors duration-300`}
           >
             {/* Logo */}
-            <Logo/>
+            <Logo />
 
             {/* Desktop Menu */}
             <nav className="hidden md:flex items-center space-x-6 ">
@@ -93,7 +86,7 @@ const Navbar: React.FC = () => {
               </button>
 
               {/* Get in touch button */}
-              <GetInTouch/>
+              <GetInTouch />
             </div>
           </div>
 
@@ -107,29 +100,32 @@ const Navbar: React.FC = () => {
                     : "bg-white/50 text-black"
                 } rounded-xl shadow-md p-4 space-y-2`}
               >
-
-                    {navItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        onClick={() => {
-                          setActiveLink(item.name);
-                          setNavOpen(false);
-                        }}
-                        className={`block w-full text-center px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 ${
-                          activeLink === item.name ? "font-semibold" : ""
-                        }`}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-
+                {navItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => {
+                      setActiveLink(item.name);
+                      setNavOpen(false);
+                    }}
+                    className={`block w-full text-center px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                      activeLink === item.name ? "font-semibold" : ""
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
 
                 <Link
                   href="/"
-                  className="w-full flex flex-col gap-2 mt-5 text-base items-center space-x-3 rounded-full backdrop-blur-lg px-4 py-1 bg-black/50 text-white hover:text-[#cbfb45] transition-colors duration-300"
+                  className="w-full flex flex-col gap-2 mt-5 text-base items-center space-x-3 rounded-full backdrop-blur-lg px-4 py-1 bg-black/50 text-white border border-gray-600 hover:text-[#cbfb45] transition-colors duration-300"
                 >
-                  Get in touch
+                  <div className="group flex flex-row gap-3 justify-center items-center">
+                    <span> Get in touch </span>
+                    <span>
+                      <LuArrowUpRight className="group-hover:rotate-45"/>
+                    </span>
+                  </div>
                 </Link>
               </div>
             )}

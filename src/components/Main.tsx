@@ -9,11 +9,11 @@ const Main = () => {
   const { darkMode } = useTheme();
 
   return (
-    <section className={`py-16 md:py-24 ${darkMode? "bg-[#111] text-white" : "bg-white text-black"}`}>
+    <section className={` ${darkMode? "bg-[#111] text-white" : "bg-white text-black"}`}>
       <div className="container mx-auto lg:mt-18 px-4 sm:px-6 lg:px-8 ">
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center mt-40 ">
           <p className="px-4 py-1 mb-6 text-sm text-gray-600 bg-[#cbfb45] rounded-full">
-            Welcome to &lt;Coder&apos;s Brain/&gt;
+            Welcome to &lt;VisionCode/&gt;
           </p>
 
 
@@ -38,7 +38,9 @@ const Main = () => {
         </div>
 
 
-        <div className="relative w-full lg:w-7xl h-[600px] mx-auto overflow-hidden rounded-3xl ">
+        <div
+          className="mx-auto relative w-full lg:w-7xl h-[600px] overflow-hidden rounded-4xl"
+        >
           <Image
             src="https://cb-assets.vercel.app/assets/freelance-main/home/office-space.webp"
             width={1024}
