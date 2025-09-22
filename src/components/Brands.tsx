@@ -9,32 +9,32 @@ import Image from "next/image";
 const brandData = [
   {
     name: "Brand Name 1",
-    logoSrc: "/path/to/logo1.png",
+    logoSrc: "https://project-assets-phi.vercel.app/assets/dashboard/assignment.png",
     altText: "Logo for Brand 1",
   },
   {
     name: "Brand Name 2",
-    logoSrc: "/path/to/logo2.png",
+    logoSrc: "https://project-assets-phi.vercel.app/assets/dashboard/calendar.png",
     altText: "Logo for Brand 2",
   },
   {
     name: "Brand Name 3",
-    logoSrc: "/path/to/logo3.png",
+    logoSrc: "https://project-assets-phi.vercel.app/assets/dashboard/finance.png",
     altText: "Logo for Brand 3",
   },
   {
     name: "Brand Name 4",
-    logoSrc: "/path/to/logo4.png",
+    logoSrc: "https://project-assets-phi.vercel.app/assets/dashboard/home.png",
     altText: "Logo for Brand 4",
   },
   {
     name: "Brand Name 5",
-    logoSrc: "/path/to/logo5.png",
+    logoSrc: "https://project-assets-phi.vercel.app/assets/dashboard/lesson.png",
     altText: "Logo for Brand 5",
   },
   {
     name: "Brand Name 6",
-    logoSrc: "/path/to/logo6.png",
+    logoSrc: "https://project-assets-phi.vercel.app/assets/dashboard/mail.png",
     altText: "Logo for Brand 6",
   },
 ];
@@ -54,10 +54,9 @@ const Brands = () => {
         </h1>
 
 
-        <div className="w-full sm:w-full md:w-[90%] lg:w-[80%] xl:w-[80%] mx-auto">
+        <div className="w-full sm:w-full md:w-[90%] lg:w-[90%] xl:w-[80%] mx-auto">
           <Marquee
-            pauseOnHover={true}
-            speed={50}
+            speed={70}
             gradient={true}
             gradientColor={darkMode ? "#111" : "#fff"}
           >
@@ -65,13 +64,13 @@ const Brands = () => {
               {brandData.map((brand, index) => (
                 <div
                   key={brand.name + index}
-                  className="flex flex-row gap-x-7 justify-center items-center p-4 border rounded-2xl"
+                  className="flex flex-row gap-x-7 justify-center items-center p-4 rounded-2xl"
                 >
                   <Image
                     src={brand.logoSrc}
                     alt={brand.altText}
-                    width={24}
-                    height={24}
+                    width={38}
+                    height={38}
                     className="w-6 h-6"
                   />
                   <span> {brand.name} </span>
