@@ -12,6 +12,7 @@ const Main = () => {
     <section className={` ${darkMode? "bg-[#111] text-white" : "bg-white text-black"}`}>
       <div className="container mx-auto lg:mt-18 px-4 sm:px-6 lg:px-8 ">
         <div className="flex flex-col items-center text-center mt-40 ">
+
           <p className="px-4 py-1 mb-6 text-sm text-gray-600 bg-[#cbfb45] rounded-full">
             Welcome to &lt;VisionCode/&gt;
           </p>
@@ -28,7 +29,7 @@ const Main = () => {
 
 
           <div className="flex flex-row gap-5 mb-16">
-            <button className={`px-6 py-2 text-base font-medium text-white hover:text-[#cbfb45] bg-[#000] rounded-full hover:bg-gray-800 transition duration-300 ${darkMode? "bg-[#000] border rouded-full text-gray-400" : "text-gray-600k"} `}>
+            <button className={`px-6 py-2 text-base font-medium text-white hover:text-[#cbfb45] bg-[#000] rounded-full transition duration-300 ${darkMode? "bg-[#000] border rouded-full text-gray-400" : "text-gray-600k"} `}>
               Get in touch
             </button>
             <button className="px-6 py-2 text-base font-medium text-gray-600 bg-white border border-gray-800 rounded-full hover:bg-[#000] hover:text-white transition duration-300">
