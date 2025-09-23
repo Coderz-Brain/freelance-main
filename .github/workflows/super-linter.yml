@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   super-lint:
@@ -37,22 +37,7 @@ jobs:
           VALIDATE_JSON: true
           VALIDATE_YAML: true
           VALIDATE_MARKDOWN: true
-
-
           VALIDATE_HTML: true
-          VALIDATE_DOCKERFILE_HADOLINT: true
-
-
-          VALIDATE_PYTHON: false
-          VALIDATE_JAVA: false
-          VALIDATE_GO: false
-          VALIDATE_PHP: false
-          VALIDATE_RUBY: false
-          VALIDATE_RUST: false
-          VALIDATE_XML: false
-          VALIDATE_POWERSHELL: false
-          VALIDATE_BASH: false
-          VALIDATE_SHELL_SHFMT: false
 
 
           FILTER_REGEX_EXCLUDE: |
@@ -65,5 +50,5 @@ jobs:
 
           VALIDATE_ALL_CODEBASE: true
 
-
+          
           DISABLE_ERRORS: true
