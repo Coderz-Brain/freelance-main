@@ -7,6 +7,12 @@ const nextConfig = {
         hostname: 'cb-assets.vercel.app',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'project-assets-phi.vercel.app',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };

@@ -20,7 +20,7 @@ const ubuntu = Ubuntu({
 
 
 export const metadata: Metadata = {
-  title: "Coder's-Brain",
+  title: "VisionCode",
   description: "Home",
 };
 
@@ -31,8 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable} ${ubuntu.variable} antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning={true} className={`${poppins.variable} ${ubuntu.variable} antialiased`}>
         <Providers>
           <Navbar/>
           {children}
