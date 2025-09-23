@@ -30,7 +30,7 @@ const ServiceRoutePage = () => {
           <p className="text-sm text-justify md:text-base lg:text-lg">
             At VisionCode, we&apos;re not just about creating content; we&apos;re about crafting
             a digital experience that resonates with your audience and drives
-            tangible results. Our team of expert marketers employs cutting-edge
+            tangible results. Our team of expert developers employs cutting-edge
             strategies and creative prowess to enhance your online presence,
             engage your community, and convert followers into loyal customers.
           </p>
