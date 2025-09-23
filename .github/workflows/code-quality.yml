@@ -19,20 +19,25 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
 
       - name: Run Code Quality Checks
         run: |
           echo "🔍 Running ESLint..."
-          npm run lint
+          pnpm run lint
 
           echo "✨ Checking code formatting..."
-          npx prettier --check "**/*.{js,jsx,ts,tsx,json,css,md}"
+          pnpm exec prettier --check "**/*.{js,jsx,ts,tsx,json,css,md}"
 
           echo "📋 Running type checking..."
-          npx tsc --noEmit
+          pnpm exec tsc --noEmit
 
           echo "✅ All code quality checks passed!"
