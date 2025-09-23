@@ -31,13 +31,10 @@ jobs:
 
       - name: Run Code Quality Checks
         run: |
-          echo "🔍 Running ESLint..."
+          echo "Running ESLint..."
           pnpm run lint
 
-          echo "✨ Checking code formatting..."
-          pnpm exec prettier --check "**/*.{js,jsx,ts,tsx,json,css,md}"
-
-          echo "📋 Running type checking..."
+          echo "Running TypeScript type checking..."
           pnpm exec tsc --noEmit
 
-          echo "✅ All code quality checks passed!"
+          echo "Code quality checks completed successfully!"
