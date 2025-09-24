@@ -32,7 +32,7 @@ const Main = () => {
             <button className={`px-6 py-2 text-base font-medium text-white hover:text-[#cbfb45] bg-[#000] rounded-full transition duration-300 ${darkMode? "bg-[#000] border rouded-full text-gray-400" : "text-gray-600k"} `}>
               Get in touch
             </button>
-            <button className="px-6 py-2 text-base font-medium text-gray-600 bg-white border border-gray-800 rounded-full hover:bg-[#000] hover:text-white transition duration-300">
+            <button className="px-6 py-2 text-base font-medium text-gray-600 bg-white border border-gray-800 rounded-full hover:bg-[#000] hover:text-[#cbfb45] transition duration-300">
               Book a call
             </button>
           </div>
