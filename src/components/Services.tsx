@@ -37,7 +37,7 @@ const Services = () => {
     <div
       id="services"
       className={`max-w-[1280px] w-full mx-auto my-8 py-8 px-4 md:my-16 md:py-16 md:px-6 rounded-[45px] ${
-        darkMode ? "bg-[#222] text-white" : "bg-gray-100 text-black"
+        darkMode ? "bg-[#222] text-white" : "bg-[#f8f8f8] text-black"
       }`}
     >
       <div className="flex flex-col gap-4 text-left">
