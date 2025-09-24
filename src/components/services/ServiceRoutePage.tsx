@@ -5,10 +5,11 @@ import { useTheme } from "@/components/context/ThemeContext";
 import Image from "next/image";
 import Brands from "@/components/Brands";
 import Services from "@/components/Services"
+import SeeOurWork from "./SeeOurWork";
+import CompanySnapshot from "./CompanySnapshot";
 
 
 const ServiceRoutePage = () => {
-
 
   const { darkMode } = useTheme();
 
@@ -24,8 +25,8 @@ const ServiceRoutePage = () => {
           <span className="w-fit bg-[#cbfb45] px-3 py-1 text-xs md:px-4 md:py-1 md:text-sm text-gray-600 rounded-full">
             Our Services
           </span>
-          <span className="text-3xl md:text-4xl lg:text-5xl ">
-            We are a Website Development Agency
+          <span className="text-3xl md:text-4xl lg:text-6xl">
+            We are a Website Development Firm
           </span>
           <p className="text-sm text-justify md:text-base lg:text-lg">
             At VisionCode, we&apos;re not just about creating content; we&apos;re about crafting
@@ -45,7 +46,7 @@ const ServiceRoutePage = () => {
             >
               Get in touch
             </button>
-            <button className="px-6 py-2 text-base font-medium text-gray-600 bg-white border border-gray-800 rounded-full hover:bg-[#000] hover:text-white transition duration-300">
+            <button className="px-6 py-2 text-base font-medium text-gray-600 bg-white border border-gray-800 rounded-full hover:bg-[#000] hover:text-[#cbfb45] transition duration-300">
               Book a call
             </button>
           </div>
@@ -66,6 +67,11 @@ const ServiceRoutePage = () => {
       <Brands/>
 
       <Services/>
+
+      <SeeOurWork/>
+
+      <CompanySnapshot/>
+
 
     </div>
   );

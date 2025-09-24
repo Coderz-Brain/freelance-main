@@ -1,9 +1,9 @@
-import ServiceRoutePage from '@/components/service/ServiceRoutePage'
+import ServiceRoutePage from '@/components/services/ServiceRoutePage'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
+    <div className='[font-family:var(--font-ubuntu)]'>
       <ServiceRoutePage/>
     </div>
   )
