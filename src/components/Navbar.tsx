@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
   const navItems: NavItem[] = [
     {
       name: "About",
-      href: "/about-us",
+      href: "/about",
     },
     {
       name: "Services",
