@@ -5,8 +5,11 @@ import Logo from './common/logo/Logo'
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import Link from 'next/link'
+import { useTheme } from './context/ThemeContext'
 
 const Footer = () => {
+
+  const { darkMode } = useTheme();
 
   const mobileBoxClasses = 'p-4 rounded-lg w-full';
 
@@ -37,7 +40,7 @@ const Footer = () => {
 
           <div className={`${mobileBoxClasses} lg:p-0 lg:border-none lg:rounded-none lg:min-h-0`}>
             <h4 className='font-semibold mb-6'>Quick Links</h4>
-            <ul className='space-y-4 text-sm lg:text-[12px] text-gray-500'>
+            <ul className={`space-y-4 text-[12px] lg:text-sm ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
               <li> <Link href="/" className='hover:underline'>About us</Link> </li>
               <li> <Link href="/" className='hover:underline'>Services</Link> </li>
               <li> <Link href="/" className='hover:underline'>Case studies</Link> </li>
@@ -48,9 +51,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className={`${mobileBoxClasses} lg:p-0 lg:border-none lg:rounded-none lg:min-h-0`}>
+          <div className={`${mobileBoxClasses} lg:p-0 lg:border-none lg:rounded-none lg:min-h-0 `}>
             <h4 className='font-semibold mb-6'>Contact</h4>
-            <ul className='space-y-4 text-sm lg:text-[12px] text-gray-500'>
+            <ul className={`space-y-4 text-sm lg:text-[12px] ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
               <li>012 34 567 890</li>
               <li>info@vision.agency</li>
               <li className='max-w-[200px]'>VisionCode Office Complex 13 Imaginary Street Manchester</li>
@@ -59,7 +62,7 @@ const Footer = () => {
 
           <div className={`${mobileBoxClasses} lg:p-0 lg:border-none lg:rounded-none lg:min-h-0 col-span-2 lg:col-span-1`}>
             <h4 className='font-semibold mb-6'>Follow us</h4>
-            <ul className='space-y-4 text-sm lg:text-[12px] text-gray-500'>
+            <ul className={`space-y-4 text-[12px] lg:text-sm ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
               <Link href="www.facebook.com" target='_blank' className='flex items-center gap-3'>
                 <span className='bg-[#171717] p-1.5 rounded-full'>
                   <FaFacebook className='text-lg text-[#cbfb45]' />
