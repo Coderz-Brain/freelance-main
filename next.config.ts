@@ -3,7 +3,7 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true, 
     remotePatterns: [
       {
         protocol: 'https',
