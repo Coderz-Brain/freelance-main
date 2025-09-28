@@ -36,16 +36,16 @@ const Services = () => {
   return (
     <div
       id="services"
-      className={`max-w-[1280px] w-full mx-auto my-8 py-8 px-4 md:my-16 md:py-16 md:px-6 rounded-[45px] ${
+      className={`w-full mx-auto py-4 px-4 md:my-8 md:py-8 md:px-6 rounded-[45px] ${
         darkMode ? "bg-[#222] text-white" : "bg-[#f8f8f8] text-black"
       }`}
     >
       <div className="flex flex-col gap-4 text-left">
-        <span className="w-fit bg-[#cbfb45] px-3 py-1 text-xs md:px-4 md:py-1 md:text-sm text-gray-600 rounded-full">
+        <span className="bg-[#cbfb45] w-fit h-fit px-3 py-1 text-xs md:px-4 md:py-1 md:text-sm text-gray-600 rounded-full">
           What we do
         </span>
         <span className="text-3xl lg:text-5xl">Our services</span>
-        <span className="text-base md:text-lg max-w-3xl">
+        <span className="text-base md:text-lg">
           Propel Your Presence With Proven Expertise
         </span>
       </div>

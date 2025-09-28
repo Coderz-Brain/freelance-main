@@ -44,7 +44,7 @@ const SeeOurWork: React.FC = () => {
   const { darkMode } = useTheme();
 
   return (
-    <section className={`max-w-[1280px] mx-auto py-16  ${darkMode ? "bg-[#111] text-white": "bg-white text-black"}`}>
+    <section className={`w-full mx-auto py-16  ${darkMode ? "bg-[#111] text-white": "bg-white text-black"}`}>
       <div >
 
         <div className="flex flex-row justify-between mb-10">

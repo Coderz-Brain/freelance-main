@@ -1,23 +1,18 @@
-import React from 'react'
-import Link from 'next/link'
-import { useTheme } from '@/components/context/ThemeContext'
+import React from "react";
+import Link from "next/link";
 
 const Logo = () => {
-
-  const { darkMode } = useTheme()
-
   return (
     <div>
-      <Link
-        href="/"
-        className="flex items-center space-x-2 rounded-full"
-      >
-        <div className={`px-4 py-2 rounded-full bg-black text-[#cbfb45] sm:text-sm ${darkMode ? " border border-gray-600" : ""} `}>
+      <Link href="/" className="flex items-center space-x-2 rounded-full">
+        <div
+          className={`px-4 py-2 rounded-full text-[#cbfb45] sm:text-sm lg:text-xl `}
+        >
           <span> &lt;VisionCode/&gt; </span>
         </div>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Logo
+export default Logo;
