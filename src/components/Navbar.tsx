@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useTheme } from "../components/context/ThemeContext";
 import Logo from "./common/logo/Logo";
-import { LuSun, LuMoon, LuX, LuMenu, LuArrowUpRight  } from "react-icons/lu";
+import { LuSun, LuMoon, LuX, LuMenu, LuArrowUpRight } from "react-icons/lu";
 import GetInTouch from "./common/getInTouch/GetInTouch";
 
 type NavItem = {
@@ -15,28 +16,28 @@ type NavItem = {
 
 const Navbar: React.FC = () => {
   const { darkMode, toggleDark } = useTheme();
+  const pathname = usePathname();
 
   const [navOpen, setNavOpen] = useState<boolean>(false);
-  const [activeLink, setActiveLink] = useState<string>("Works");
 
   const toggleNav = (): void => setNavOpen(!navOpen);
 
   const navItems: NavItem[] = [
     {
       name: "About",
-      href: "/about",
+      href: "/about/",
     },
     {
       name: "Services",
-      href: "/services",
+      href: "/services/",
     },
     {
       name: "Case Studies",
-      href: "/case-studies",
+      href: "/case-studies/",
     },
     {
       name: "Blog",
-      href: "/blog",
+      href: "/blog/",
     },
   ];
 
@@ -53,20 +54,18 @@ const Navbar: React.FC = () => {
             <Logo />
 
             {/* Desktop Menu */}
-            <nav className="hidden md:flex items-center space-x-6 ">
+            <nav className={"hidden md:flex items-center space-x-6"}>
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  onClick={() => setActiveLink(item.name)}
                   className={`relative px-3 py-1 text-[14px] rounded-md transition hover:bg-[#cbfb45] hover:text-black ${
-                    activeLink === item.name
+                    pathname === item.href
                       ? "bg-[#cbfb45] shadow-inner text-black"
                       : "bg-transparent"
                   }`}
                 >
                   {item.name}
-                  {activeLink === item.name}
                 </Link>
               ))}
             </nav>
@@ -104,12 +103,9 @@ const Navbar: React.FC = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    onClick={() => {
-                      setActiveLink(item.name);
-                      setNavOpen(false);
-                    }}
+                    onClick={() => setNavOpen(false)}
                     className={`block w-full text-center px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 ${
-                      activeLink === item.name ? "font-semibold" : ""
+                      pathname === item.href ? "font-semibold" : ""
                     }`}
                   >
                     {item.name}
@@ -123,7 +119,7 @@ const Navbar: React.FC = () => {
                   <div className="group flex flex-row gap-3 justify-center items-center">
                     <span> Get in touch </span>
                     <span>
-                      <LuArrowUpRight className="group-hover:rotate-45"/>
+                      <LuArrowUpRight className="group-hover:rotate-45" />
                     </span>
                   </div>
                 </Link>

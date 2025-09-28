@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import { useTheme } from '../context/ThemeContext'
 
@@ -45,7 +46,7 @@ const CompanySnapshot = () => {
   const { darkMode } = useTheme();
 
   return (
-    <section className={`max-w-[1280px] mx-auto py-16  ${darkMode ? "bg-[#111] text-white": "bg-white text-black"}`}>
+    <section className={`w-full mx-auto py-16  ${darkMode ? "bg-[#111] text-white": "bg-white text-black"}`}>
 
       <div className="flex flex-row justify-between mb-10">
         <div className='flex flex-col gap-2'>

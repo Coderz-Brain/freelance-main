@@ -23,11 +23,11 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
 }) => {
   return (
     <div
-      className="p-4 border border-gray-600 rounded-xl md:rounded-4xl cursor-pointer transition-all duration-500"
+      className="border border-gray-600 rounded-xl md:rounded-4xl cursor-pointer transition-all duration-500"
     >
       <button
         type="button"
-        className="flex justify-between items-center w-full bg-transparent cursor-pointer focus:outline-none"
+        className="flex justify-between items-center w-full bg-transparent p-4 cursor-pointer focus:outline-none"
         aria-expanded={isExpanded}
         tabIndex={0}
         onClick={onToggle}
@@ -38,7 +38,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({
           }
         }}
       >
-        <h3 className="text-lg lg:text-xl ">{service.name}</h3>
+        <h3 className="text-lg lg:text-xl whitespace-nowrap ">{service.name}</h3>
         <span>
           <span
             className={`h-8 w-8 p-1 bg-[#cbfb45] text-black rounded-full flex items-center justify-center transition-transform duration-300 transform ${
